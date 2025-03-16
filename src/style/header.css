@@ -1,0 +1,18 @@
+.border-right {
+  position: relative;
+}
+
+.border-right::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  content: "";
+  width: 1px;
+  height: 50%;
+  background-color: white;
+}
+
+.swiper-button-next , .swiper-button-prev {
+    visibility: hidden !important;
+}
