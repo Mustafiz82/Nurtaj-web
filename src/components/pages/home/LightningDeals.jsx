@@ -41,7 +41,7 @@ const LightningDeals = () => {
 
             <div className="grid grid-cols-5 gap-5 mt-10">
                 {
-                    productData?.map((item , idx) => <ProductCard key={idx} item={item}/>)
+                    productData?.slice(0,5).map((item , idx) => <ProductCard key={idx} item={item}/>)
                 }
             </div>
         </div>

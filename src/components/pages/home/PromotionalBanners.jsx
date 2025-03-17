@@ -11,33 +11,37 @@ const PromotionalBanners = () => {
     ];
 
     return (
-        <div className="mx-10 my-20">
+        <div className="mx-10 mt-20 mb-16">
             <div className="grid gap-5">
                 <div className="grid grid-cols-3 gap-5">
                     {banners.slice(0, 3).map((banner, index) => (
-                        <Image 
-                            key={index} 
-                            src={banner.src} 
-                            width={1000} 
-                            height={1000} 
-                            className="w-full h-auto" 
-                            alt={`promotional banner ${index + 1}`} 
+                        <Image
+                            key={index}
+                            src={banner.src}
+                            width={1000}
+                            height={1000}
+                            className="w-full h-auto"
+                            alt={`promotional banner ${index + 1}`}
                             priority
                         />
                     ))}
                 </div>
                 <div className="grid grid-cols-2 gap-5">
                     {banners.slice(3).map((banner, index) => (
-                        <Image 
-                            key={index + 3} 
-                            src={banner.src} 
-                            width={1000} 
-                            height={1000} 
-                            className="w-full h-auto" 
-                            alt={`promotional banner ${index + 4}`} 
+                        <Image
+                            key={index + 3}
+                            src={banner.src}
+                            width={1000}
+                            height={1000}
+                            className="w-full h-auto"
+                            alt={`promotional banner ${index + 4}`}
                         />
                     ))}
                 </div>
+            </div>
+
+            <div className="py-3 mt-10 bg-primary text-center italic font-extrabold text-white ">
+                Shop now, Pay later
             </div>
         </div>
     );
