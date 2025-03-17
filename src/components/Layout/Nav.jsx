@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import { BiSearchAlt  } from 'react-icons/bi';
+import { BiSearchAlt } from 'react-icons/bi';
 
 const Nav = () => {
 
@@ -67,7 +67,7 @@ const Nav = () => {
                 <Icon src={"/icons/proicons_cart.svg"} />
                 <span className='text-[12px] -mt-4 -ml-4 w-4 h-4 text-primary grid place-items-center bg-white rounded-full'>1 </span>
             </div>
-        
+
 
         </div>
     );
