@@ -1,3 +1,4 @@
+import AllProducts from "@/components/MobileComponents/AllProducts";
 import Offer from "@/components/MobileComponents/Offer";
 import Slider from "@/components/MobileComponents/Slider";
 import Banner from "@/components/pages/home/Banner";
@@ -8,7 +9,7 @@ import WhyChooceUs from "@/components/pages/home/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div className="mb-20">
+    <div className="">
 
       <Banner />
       <div className="lg:hidden">
@@ -20,10 +21,13 @@ export default function Home() {
         <Slider />
       </div>
       <div className="hidden lg:block">
-      <PromotionalBanners />
+        <PromotionalBanners />
+        <SpringSale />
       </div>
-        <SpringSale/>
-
+      <div className="lg:hidden mx-5">
+        <AllProducts />
+      </div>
+      
     </div>
   );
 }
