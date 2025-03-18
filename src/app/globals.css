@@ -30,3 +30,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.swiper-pagination-bullet {
+  opacity: 0.8 !important;
+ 
+  background-color: white !important;
+  
+}
+
+/* Style for the active pagination bullet */
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background-color: black !important;
+  position: relative;
+
+
+  /* You can change this to any color you like */
+}

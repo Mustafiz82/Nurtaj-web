@@ -3,10 +3,24 @@ import { productData } from '@/Data/ProductData';
 import Image from 'next/image';
 import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
-import { BsLightningFill } from "react-icons/bs";
+import { BsCurrencyDollar, BsLightningFill } from "react-icons/bs";
+import { FaFire } from 'react-icons/fa6';
 
 
 const LightningDeals = () => {
+
+    const PriceFormatter = ({ price }) => {
+        const [integerPart, decimalPart] = price.toFixed(2).split(".");
+
+        return (
+            <span className='flex font-bold items-end'>
+                <span className="text-[12px] font-bold">{integerPart}.</span>
+                <span className="text-[10px] ">{decimalPart}</span>
+            </span>
+        );
+    };
+
+
     return (
         <div className='m-5 lg:m-10 lg:py-5'>
 
@@ -51,6 +65,19 @@ const LightningDeals = () => {
                             height={500}
                             className='min-w-[110px] z-[99] h-auto'
                         />
+                        <h2 className='line-clamp-1 text-[12px] font-medium'>{item?.title}</h2>
+                        <div className='flex justify-between     items-center'>
+                            <div className="flex text-primary   items-center     ">
+                                <BsCurrencyDollar className='text-[12px]'/> <span className=''><PriceFormatter price={item?.price} /></span>
+
+                            </div>
+                            {
+                                item?.sold && <div className='flex pb-1 gap- items-center' >
+                                    
+                                    <span className=' text-[12px] text-black/60'>{item?.sold} sold</span>
+                                </div>
+                            }
+                        </div>
                     </div>)
                 }
             </div>

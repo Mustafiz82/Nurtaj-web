@@ -1,4 +1,5 @@
 import Offer from "@/components/MobileComponents/Offer";
+import Slider from "@/components/MobileComponents/Slider";
 import Banner from "@/components/pages/home/Banner";
 import LightningDeals from "@/components/pages/home/LightningDeals";
 import PromotionalBanners from "@/components/pages/home/PromotionalBanners";
@@ -7,17 +8,21 @@ import WhyChooceUs from "@/components/pages/home/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div>
+    <div className="mb-20">
 
       <Banner />
-      {/* offer mobile component  */}
       <div className="lg:hidden">
         <Offer />
       </div>
       <WhyChooceUs />
-     <LightningDeals/>
-      {/*  <PromotionalBanners/>
-      <SpringSale/> */}
+      <LightningDeals />
+      <div className="lg:hidden mx-5">
+        <Slider />
+      </div>
+      <div className="hidden lg:block">
+      <PromotionalBanners />
+      </div>
+        <SpringSale/>
 
     </div>
   );

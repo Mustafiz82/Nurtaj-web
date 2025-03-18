@@ -42,7 +42,7 @@ const SpringSale = () => {
     };
 
     return (
-        <div className='mx-10 my-10'>
+        <div className='mx-10  my-10'>
             <div className="my-10 ">
                 <h1 className="text-#621FE0 text-center text-[#621FE0] font-extrabold uppercase text-2xl">Spring sale</h1>
                 <h1 className="text-#621FE0 text-center text-primary font-extrabold uppercase text-2xl">Explore your interests</h1>
