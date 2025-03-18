@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import MobileHeader from "@/components/Layout/MobileHeader";
+import MobileBottomNav from "@/components/Layout/MobileBottomNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,10 @@ export default function RootLayout({ children }) {
         <div className="hidden lg:block">
           <Footer />
         </div>
+        <div className="lg:hidden pt-20">
+          <MobileBottomNav />
+        </div>
+
 
       </body>
     </html>
