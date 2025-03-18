@@ -3,28 +3,23 @@ import { productData } from '@/Data/ProductData';
 import Image from 'next/image';
 import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
+import { BsLightningFill } from "react-icons/bs";
+
 
 const LightningDeals = () => {
     return (
-        <div className='mx-10 my-10 py-5'>
+        <div className='m-5 lg:m-10 lg:py-5'>
 
-            <div className="bg-primary relative py-3 px-5 flex justify-center items-center gap-7">
-                <div className="flex gap-2">
-                    <Image
-                        src={"/icons/lightning.svg"}
-                        alt='logo'
-                        priority
-                        width={500}
-                        height={500}
-                        className='w-[26px] h-auto'
-                    />
+            <div className="lg:bg-primary  relative lg:py-3 lg:px-5 flex justify-between lg:justify-center items-center gap-7">
+                <div className="flex items-center gap-1 lg:gap-2">
+                    <BsLightningFill className='text-black lg:text-white text-lg' />
 
-                    <h1 className='font-extrabold italic text-lg text-white'>Lightning deals</h1>
+                    <h1 className='font-extrabold italic text-lg text-black lg:text-white'>Lightning deals</h1>
                 </div>
 
-                <div className="flex text-white items-center gap-1">
+                <div className="flex text-black lg:text-white items-center gap-1">
                     <p>Limited time offer</p>
-                    <IoIosArrowForward className='text-normal' />
+                    <IoIosArrowForward className='hidden lg:block text-normal' />
                 </div>
 
 
@@ -34,14 +29,29 @@ const LightningDeals = () => {
                     priority
                     width={500}
                     height={500}
-                    className='w-[100px] h-auto absolute -left-[20px]'
+                    className='w-[100px]  hidden lg:block h-auto absolute -left-[20px]'
                 />
 
             </div>
 
-            <div className="grid grid-cols-5 gap-5 mt-10">
+            <div className=" hidden lg:grid  grid-cols-5 gap-5 mt-10">
                 {
-                    productData?.slice(0,5).map((item , idx) => <ProductCard key={idx} item={item}/>)
+                    productData?.slice(0, 5).map((item, idx) => <ProductCard key={idx} item={item} />)
+                }
+            </div>
+
+            <div className='lg:hidden overflow-x-auto  flex gap-4   flex-nowrap  w-full  mt-5'>
+                {
+                    productData?.slice(0, 5).map((item, idx) => <div key={idx}>
+                        <Image
+                            src={item?.image}
+                            alt='logo'
+                            priority
+                            width={500}
+                            height={500}
+                            className='min-w-[110px] z-[99] h-auto'
+                        />
+                    </div>)
                 }
             </div>
         </div>
