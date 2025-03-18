@@ -40,7 +40,7 @@ const Nav = () => {
             </div>
 
             <div className="relative bg-white rounded-full  "  >
-                <input className='  duration-200 font-normal text-black px-5 py-3 rounded-full  focus:outline-0 focus:border-gray-600 w-[300px]   ' type="text" placeholder='Search blogs ...' />
+                <input className='  duration-200 font-normal text-black px-5 py-3 rounded-full  focus:outline-0 focus:border-gray-600 w-[300px]   ' type="text" placeholder='Search Products ...' />
                 <div className='bg-primary absolute top-[4px] right-[4px] rounded-full flex justify-center items-center  w-9 h-9 p-2'>
                     <BiSearchAlt className='text-xl text-white  ' />
                 </div>

@@ -14,9 +14,6 @@ const Banner = () => {
     const arr = Array.from({ length: 3 }, (_, i) => i);
     const swiperRef = useRef(null);
 
-    const handleSlideNext = () => {
-
-    }
 
 
     return (
@@ -37,15 +34,15 @@ const Banner = () => {
                         backgroundSize: "contain    ",
                         backgroundPosition: "center"
                     }}
-                    className='bg-secondary px-10 flex justify-evenly items-center h-[400px] overflow-hidden text-white'
+                    className='bg-secondary px-5 lg:px-10 flex justify-evenly items-center   h-[180px] lg:h-[400px] overflow-hidden text-white'
                 >
                     <div className="space-y-3">
-                        <button className="bg-[#EFD33D] text-black text-sm font-semibold py-2 px-3 w-fit ">
+                        <button className="bg-[#EFD33D] hidden lg:block text-black text-sm font-semibold py-2 px-3 w-fit ">
                             INTRODUCING NEW
                         </button>
-                        <h1 className='font-bold text-4xl max-w-[420px] font-public-sans '>Google Pixel 7 pro Ultra
+                        <h1 className='font-bold text-base lg:text-4xl max-w-[420px] font-public-sans '>Google Pixel 7 pro Ultra
                             12GB+256GB</h1>
-                        <p className='max-w-[320px] text-white/70'> Data provided by internal laboratories. Industry measurment.</p>
+                        <p className='max-w-[160px] lg:max-w-[320px] text-[10px] lg:text-base text-white/70'> Data provided by internal laboratories. Industry measurment.</p>
 
                         <Button />
                     </div>
@@ -55,19 +52,19 @@ const Banner = () => {
                         alt='banner-image'
                         width={1000}
                         height={1000}
-                        className='w-[400px] h-auto mt-20'
+                        className='w-[160px] lg:w-[400px] h-auto mt-10   lg:mt-20'
                     />
                 </div></SwiperSlide>)
             }
 
             <div
                 onClick={() => swiperRef.current?.slidePrev()}
-                className='absolute w-10 h-10 flex justify-center items-center bg-white rounded-full z-[999] top-1/2 left-[40px] translate-y-[-50%]'>
+                className='hidden lg:flex absolute w-10 h-10  justify-center items-center bg-white rounded-full z-[999] top-1/2 left-[40px] translate-y-[-50%]'>
                 <IoIosArrowBack className='text-2xl -ml-1' />
             </div>
             <div
                 onClick={() => swiperRef.current?.slideNext()}
-                className='absolute w-10 h-10 flex justify-center items-center bg-white rounded-full z-[999] top-1/2 right-[40px] translate-y-[-50%]'>
+                className='hidden lg:flex absolute w-10 h-10  justify-center items-center bg-white rounded-full z-[999] top-1/2 right-[40px] translate-y-[-50%]'>
                 <IoIosArrowBack className='text-2xl rotate-180 -mr-1' />
             </div>
 

@@ -9,10 +9,10 @@ export default function Home() {
     <div>
 
       <Banner/>
-      <WhyChooceUs/>
+      {/* <WhyChooceUs/>
       <LightningDeals/>
       <PromotionalBanners/>
-      <SpringSale/>
+      <SpringSale/> */}
       
     </div>
   );

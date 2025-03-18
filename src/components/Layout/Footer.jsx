@@ -1,10 +1,7 @@
 'use client';
-
 import { companyInfo, customerService, features, helpLinks, paymentMethods, socialLinks } from '@/Data/FooterData';
 import Image from 'next/image';
 import Link from 'next/link';
-
-
 
 const Footer = () => {
 
@@ -19,7 +16,6 @@ const Footer = () => {
         />
     );
 
-
     return (
         <footer className="bg-black text-white py-10 px-5 md:px-20">
             <div className="max-w-7xl mx-auto flex justify-between w-full gap-8">
@@ -30,8 +26,6 @@ const Footer = () => {
                         {
                             companyInfo?.map((item, idx) => <li key={idx}><Link href={item?.href}>{item?.name}</Link></li>)
                         }
-
-
                     </ul>
                 </div>
 
@@ -81,8 +75,6 @@ const Footer = () => {
                                     <p>{item?.name}</p>
                                 </div>)
                             }
-
-
                         </div>
                     </div>
                     <div className="flex gap-4 my-5 pt-5">
@@ -98,11 +90,9 @@ const Footer = () => {
                 <div>
                     <h2 className='font-bold text-lg text-white'> Connect with Nurtaj</h2>
                     <div className="mt-3 flex flex-wrap items-center justify-center gap-4">
-
                         {
-                            paymentMethods?.map((item, idx) => <Image key={idx} src={item?.icon} alt={item?.name} width={50} height={30} />)
+                            paymentMethods?.map((item, idx) => <Image key={idx} src={item?.icon} alt={item?.name} className='bg-white' width={50} height={30} />)
                         }
-
                     </div>
                 </div>
                 <div className='w-[30%]'>
@@ -110,9 +100,7 @@ const Footer = () => {
                     <div className="flex text-5xl pt-3 gap-4 ">
                         {
                             socialLinks?.map((item, idx) => <Link  key={idx} href={item?.href} >{item.icon}</Link>)
-                        }
-
-                       
+                        }                       
                     </div>
                 </div>
             </div>
