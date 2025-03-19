@@ -24,15 +24,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[]`}
       >
-        <div className="hidden lg:block ">
+        <div className=" ">
           <Header />
         </div>
-        <div className="lg:hidden ">
+        {/* <div className="lg:hidden ">
           <MobileHeader />
-        </div>
+        </div> */}
+        <div className="bg-[#F6F6F6]">
         {children}
+        </div>
         <div className="hidden lg:block">
           <Footer />
         </div>

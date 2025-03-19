@@ -33,6 +33,7 @@ export default function Slider() {
                     src={item?.src}
                     width={1000}
                     height={1000}
+                    alt={"banner"+idx}
                     className='w-full h-[200px] object-cover'
                      
                      />
