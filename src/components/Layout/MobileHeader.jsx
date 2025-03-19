@@ -35,7 +35,7 @@ const MobileHeader = () => {
                     categories?.map((item, idx) => <div key={idx}>
                         <h2
                             onClick={() => setActiveTab(item?.title)}
-                            className={`${activeTab == item?.title ? "text-white border-b-2" : "text-white/70" }  pb-1 px-1 `}>{item?.title}</h2>
+                            className={`${activeTab == item?.title ? "text-white border-b-2" : "text-white/70" } md:text-lg  pb-1 px-1 `}>{item?.title}</h2>
                     </div>)
                 }
             </div>
