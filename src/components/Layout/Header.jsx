@@ -9,7 +9,7 @@ const Header = () => {
         <div >
             <div className="hidden lg:flex w-full bg-secondary   not-even:">
                 {
-                    HeaderData?.map((item, idx) => <div key={idx} className={` text-white  my-2 px-5 flex  px-10 gap-3 items-center justify-center ${idx !== 3 ? "border-right w-[24%]" : "w-[30%] "} ${
+                    HeaderData?.map((item, idx) => <div key={idx} className={` text-white  my-2  flex  px-10 gap-3 items-center justify-center ${idx !== 3 ? "border-right w-[24%]" : "w-[30%] "} ${
                         idx == 0 ? "justify-start" : idx == 3 ? "justify-end" : "justify-center"
                     }`}>
                         <div className={`${idx == 3 && "border border-white rounded-full px-5 py-2"} flex gap-3 items-center `}>

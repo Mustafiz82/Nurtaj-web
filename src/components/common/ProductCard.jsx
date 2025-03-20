@@ -36,16 +36,16 @@ const ProductCard = ({ item }) => {
 
 
     return (
-        <div className='flex flex-col h-full justify-between'>
+        <div className='flex group flex-col h-full justify-between'>
             <div>
-                <div className='relative'>
+                <div className='relative overflow-hidden'>
                     <Image
                         src={item?.image}
                         alt='logo'
                         priority
                         width={500}
                         height={500}
-                        className='w-full h-auto'
+                        className='w-full group-hover:scale-110 duration-300 h-auto'
                     />
                     <div className='absolute flex m-2 lg:m-3 gap-2 text-white top-0'>
                         {
@@ -63,7 +63,7 @@ const ProductCard = ({ item }) => {
 
                 </div>
                 <div>
-                    <h2 className='text-[12px] lg:text-sm lg:font-semibold line-clamp-1 mt-3 lg:line-clamp-2 lg:h-[3em]'>{item?.title} </h2>
+                    <h2 className='text-[12px] duration-300 group-hover:text-primary lg:text-sm lg:font-semibold line-clamp-1 mt-3 lg:line-clamp-2 lg:h-[3em]'>{item?.title} </h2>
                     <div className='hidden lg:flex justify-between items-end'>
                         <div className='flex items-end'>
                             <div className="flex text-primary  mt-2 items-center     ">
@@ -137,7 +137,7 @@ const ProductCard = ({ item }) => {
 
             </div>
 
-            <button className='border hidden lg:block w-full mt-2 border-black py-2 px-5 justify-center items-center hover:bg-black duration-300 text-black hover:text-white'>
+            <button className='border active:scale-95 duration-300 hidden lg:block w-full mt-2 border-black py-2 px-5 justify-center items-center hover:bg-black duration-300 text-black hover:text-white'>
                 Add To Cart
             </button>
         </div>

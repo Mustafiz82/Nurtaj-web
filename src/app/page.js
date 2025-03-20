@@ -3,7 +3,7 @@ import Offer from "@/components/MobileComponents/Offer";
 import Slider from "@/components/MobileComponents/Slider";
 import Banner from "@/components/pages/home/Banner";
 import LightningDeals from "@/components/pages/home/LightningDeals";
-import PromotionalBanners from "@/components/pages/home/PromotionalBanners";
+import PromotionalBanners from "@/components/common/PromotionalBanners";
 import SpringSale from "@/components/pages/home/SpringSale";
 import WhyChooceUs from "@/components/pages/home/WhyChooseUs";
 

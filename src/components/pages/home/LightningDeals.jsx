@@ -7,7 +7,7 @@ import { BsCurrencyDollar, BsLightningFill } from "react-icons/bs";
 import { FaFire } from 'react-icons/fa6';
 
 
-const LightningDeals = () => {
+const LightningDeals = ({ hideImage }) => {
 
     const PriceFormatter = ({ price }) => {
         const [integerPart, decimalPart] = price.toFixed(2).split(".");
@@ -43,7 +43,7 @@ const LightningDeals = () => {
                     priority
                     width={500}
                     height={500}
-                    className='w-[100px]  hidden lg:block h-auto absolute -left-[20px]'
+                    className={`w-[100px]  hidden lg:block h-auto absolute -left-[20px] ${hideImage ? "lg:hidden" : "lg:block"}`}
                 />
 
             </div>
@@ -68,12 +68,12 @@ const LightningDeals = () => {
                         <h2 className='line-clamp-1 text-[12px] font-medium'>{item?.title}</h2>
                         <div className='flex justify-between     items-center'>
                             <div className="flex text-primary   items-center     ">
-                                <BsCurrencyDollar className='text-[12px]'/> <span className=''><PriceFormatter price={item?.price} /></span>
+                                <BsCurrencyDollar className='text-[12px]' /> <span className=''><PriceFormatter price={item?.price} /></span>
 
                             </div>
                             {
                                 item?.sold && <div className='flex pb-1 gap- items-center' >
-                                    
+
                                     <span className=' text-[12px] text-black/60'>{item?.sold} sold</span>
                                 </div>
                             }
