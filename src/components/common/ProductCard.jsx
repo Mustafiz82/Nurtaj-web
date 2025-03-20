@@ -137,7 +137,7 @@ const ProductCard = ({ item }) => {
 
             </div>
 
-            <button className='border active:scale-95 duration-300 hidden lg:block w-full mt-2 border-black py-2 px-5 justify-center items-center hover:bg-black duration-300 text-black hover:text-white'>
+            <button className='border active:scale-95 duration-300 hidden lg:block w-full mt-2 border-black py-2 px-5 justify-center items-center hover:bg-black  text-black hover:text-white'>
                 Add To Cart
             </button>
         </div>

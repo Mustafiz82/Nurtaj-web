@@ -47,3 +47,15 @@ body {
 
   /* You can change this to any color you like */
 }
+.swiper {
+  overflow-x: hidden !important; /* Prevents horizontal scrolling */
+  overflow-y: visible !important; /* Allows vertical visibility */
+}
+
+.swiper-wrapper {
+  overflow: visible !important; /* Ensures child elements can be seen */
+}
+
+.swiper-slide {
+  overflow: visible !important; /* Ensures dropdowns are not clipped */
+}
