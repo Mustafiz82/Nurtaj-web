@@ -8,6 +8,16 @@ import SpringSale from "@/components/pages/home/SpringSale";
 import WhyChooceUs from "@/components/pages/home/WhyChooseUs";
 
 export default function Home() {
+
+  const banners = [
+
+    { src: "/images/Home/member-banner.png", cols: 1 },
+    { src: "/images/Home/promotional-banner-1.png", cols: 1 },
+    { src: "/images/Home/promotional-banner-2.png", cols: 1 },
+    { src: "/images/Home/promotional-banner-4.png", cols: 2 },
+    { src: "/images/Home/promotional-banner-5.png", cols: 2 }
+  ];
+
   return (
     <div className="">
 
@@ -18,7 +28,7 @@ export default function Home() {
       <WhyChooceUs />
       <LightningDeals />
       <div className="lg:hidden mx-5">
-        <Slider />
+        <Slider data={banners} />
       </div>
       <div className="hidden lg:block">
         <PromotionalBanners />
@@ -27,7 +37,7 @@ export default function Home() {
       <div className="lg:hidden mx-5">
         <AllProducts />
       </div>
-      
+
     </div>
   );
 }

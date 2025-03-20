@@ -15,7 +15,8 @@ export const HeaderData = [
     {
         icon : <MdOutlineWorkspacePremium />,
         title : "Premium Membership" , 
-        subtitle : "Get Up to 70% discount*"
+        subtitle : "Get Up to 70% discount*",
+        link : "/member"
 
     },
     {

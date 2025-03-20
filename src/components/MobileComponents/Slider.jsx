@@ -7,15 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 
-export default function Slider() {
-    const banners = [
-
-        { src: "/images/Home/member-banner.png", cols: 1 },
-        { src: "/images/Home/promotional-banner-1.png", cols: 1 },
-        { src: "/images/Home/promotional-banner-2.png", cols: 1 },
-        { src: "/images/Home/promotional-banner-4.png", cols: 2 },
-        { src: "/images/Home/promotional-banner-5.png", cols: 2 }
-    ];
+export default function Slider({data:banners}) {
+    
 
     return (
         <>
@@ -34,7 +27,7 @@ export default function Slider() {
                     width={1000}
                     height={1000}
                     alt={"banner"+idx}
-                    className='w-full h-[200px] object-cover'
+                    className='w-full h-[200px] sm:h-[330px] '
                      
                      />
                 </SwiperSlide>)

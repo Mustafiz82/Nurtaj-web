@@ -38,7 +38,7 @@ const Banner = () => {
                         alt='member banner'
                         width={1000}
                         height={1000}
-                        className='w-full  h-[450px]'
+                        className='w-full h-[200px] sm:h-[330px]  lg:h-[450px]'
                     />
 
                 </div></SwiperSlide>)
